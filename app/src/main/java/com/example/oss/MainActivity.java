@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView list_oss=null;
     private ImageView oss=null;
 
-    String url="https://rtmp123.oss-cn-hangzhou.aliyuncs.com/images/2022/12/27/2022-12-27-00-32-24-0.png?Expires=1987432345&OSSAccessKeyId=LTAI5tQCTPBtkjwWGU6cSM6V&Signature=bhYc7oOpWgqT2NbI%2FriFa47WINY%3D";
-    //在消息队列中实现对控件的更改
+        //在消息队列中实现对控件的更改
     private Handler handle = new Handler() {
         public void handleMessage(Message msg) {
             switch (msg.what) {
@@ -71,8 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 List<Url1> url1List=new ArrayList<>();
                 //拿到的数据url
                 url1List=img(10);
-                System.out.println(url1List);
 
+
+                Url1 url2=url1List.get(1);
+                String url=url2.getUrl1();
                 // TODO Auto-generated method stub
                 Bitmap bmp = getURLimage(url);
                 System.out.println(bmp);
